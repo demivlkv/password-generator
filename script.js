@@ -13,11 +13,12 @@ function generatePassword() {
     // minimum password character count
     var characterCount = 8;
     var userChoice = [];
+    var passwordArr = [];
 
-    // step one: ask the user for their desired password length
+    // ask the user for their desired password length
     var characterCount = window.prompt("How many characters would you like your password to be? Please choose a length between 8 and 128.");
 
-    // step two: password length 8-128 characters
+    // password length 8-128 characters
     if (isNaN(characterCount) || characterCount < 8 || characterCount > 128) {
         window.alert("Character length must be a number between 8 - 128. Please try again.");
         return false;
@@ -29,7 +30,7 @@ function generatePassword() {
     var confirmNumbers = window.confirm("Would you like to include numbers in the password?");
     var confirmSymbols = window.confirm("Would you like to include special characters in the password?");
 
-    // step three: include lowercase, uppercase, and/or special characters
+    // include lowercase, uppercase, and/or special characters
     if (confirmLowercase) {
         userChoice = userChoice.concat(alphaLower);
     }
@@ -42,13 +43,19 @@ function generatePassword() {
     if (confirmSymbols) {
         userChoice = userChoice.concat(symbol);
     }
-    debugger;
-    // step four: validate input
 
-    // step five: generate password based on user criteria
+    // validate input
+    console.log(userChoice);
 
-    // step five: display generated password!
-    return "Testing testing~";
+    // generate password based on user criteria
+    var password = "";
+    for (var i = 0; i < characterCount; i++) {
+        userInput = Math.floor(Math.random() * userChoice.length);
+        password = password + passwordArr[userInput];
+    }
+
+    // display generated password!
+    return password;
 }
 
 // Write password to the #password input
