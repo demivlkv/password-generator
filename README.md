@@ -1,2 +1,5 @@
 # Project 3: Password Generator
-We'll see how this goes...
+
+## Project Screenshot
+
+## Project Link

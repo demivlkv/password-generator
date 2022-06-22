@@ -2,7 +2,8 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-    // list arrays of all characters & symbols available to use to generate password
+
+    // list arrays of all characters & symbols available to generate password
     var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -11,15 +12,14 @@ function generatePassword() {
     // minimum password character count
     var characterCount = 8;
     var userChoice = [];
-    var choiceArray = [];
 
     // ask the user for their desired password length
     var characterCount = window.prompt("How many characters would you like your password to be? Please choose a length between 8 and 128.");
 
-    // password length 8-128 characters
+    // ensure password length 8-128 characters
     if (isNaN(characterCount) || characterCount < 8 || characterCount > 128) {
-        window.alert("Character length must be a number between 8 - 128. Please try again.");
-        return false;
+        window.alert("Password length must be a number between 8 - 128. Please try again.");
+        return generatePassword();
     }
 
     // list of user input variables
