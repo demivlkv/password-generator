@@ -1,1 +1,2 @@
-# Password Generator Starter Code
+# Project 3: Password Generator
+We'll see how this goes...
