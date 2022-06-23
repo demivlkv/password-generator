@@ -5,3 +5,4 @@ The purpose of this project is to create a password generator web application fo
 ![This is a screenshot of the password generator.](/../main/assets/images/screenshot.png)
 
 ## Project Link
+URL for password generator: [https://demivlkv.github.io/password-generator/]

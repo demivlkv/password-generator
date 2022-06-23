@@ -13,10 +13,10 @@ function generatePassword() {
     var characterCount = 8;
     var userChoice = [];
 
-    // ask the user for their desired password length
+    // ask user for their desired password length
     var characterCount = window.prompt("How many characters would you like your password to be? Please choose a length between 8 and 128.");
 
-    // ensure password length 8-128 characters
+    // ensure password length is 8-128 characters
     if (isNaN(characterCount) || characterCount < 8 || characterCount > 128) {
         window.alert("Password length must be a number between 8 - 128. Please try again.");
         return generatePassword();
